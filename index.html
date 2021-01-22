@@ -25,10 +25,12 @@
         p{
             font-family:  Courier, monospace;
             margin:1.5rem 5rem;
-            font-size:2rem;
+            font-size:5vmin;
+            font-weight: 100;
 
         }
         button{
+            font-size:4vmin;
             background-color:transparent;
             border:2px solid white;
             color:white;
@@ -45,7 +47,7 @@
 
 <body>
     <div class="bg">
-        <button class="advice">get advice</button>
+        <button class="advice">Get Advice</button>
         <p class="advicetext"></p>
     </div>
 </body>
@@ -60,7 +62,7 @@
             .then((response) => {
                 return response.json();
             }).then((response) => {
-                advicetext.innerHTML=response.slip.advice;
+                advicetext.innerHTML=" \" "+ response.slip.advice +" \"";
                 // console.log(response.slip.advice)
             })
 
